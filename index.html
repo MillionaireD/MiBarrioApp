@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	MiBarrioApp - Aplicación Web para Reportar Problemas Comunitarios
+	Basado en Solid State by HTML5 UP
+-->
+<html>
+
+<head>
+	<title>MiBarrioApp</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+<style>
+	/* Mostrar menú fijo en desktop y ocultar botón de menú */
+	@media screen and (min-width: 768px) {
+		.desktop-menu {
+			display: flex !important;
+			gap: 1.5rem;
+			align-items: center;
+		}
+
+		.mobile-menu {
+			display: none !important;
+		}
+	}
+
+	/* En móviles, ocultar menú fijo */
+	@media screen and (max-width: 767px) {
+		.desktop-menu {
+			display: none !important;
+		}
+
+		.mobile-menu {
+			display: block;
+		}
+	}
+
+	.desktop-menu a {
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+		transition: color 0.3s;
+	}
+
+	.desktop-menu a:hover {
+		color: #00ccff;
+	}
+
+	header .desktop-menu {
+		margin-left: auto;
+	}
+</style>
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>
+				<a href="index.html">
+					MiBarrioApp
+					<img src="images/logo.png" alt="Logo de MiBarrioApp"
+						style="height: 40px; vertical-align: middle; margin-left: 8px;">
+				</a>
+			</h1>
+			<nav class="desktop-menu">
+				<a href="index.html">Inicio</a>
+				<a href="#">Reportar</a>
+				<a href="#">Mapa</a>
+				<a href="#">Registrarse</a>
+				<a href="#">Iniciar Sesión</a>
+			</nav>
+			<nav class="mobile-menu">
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu móvil -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="#">Reportar</a></li>
+					<li><a href="#">Mapa</a></li>
+					<li><a href="#">Historial</a></li>
+					<li><a href="#">Iniciar Sesión</a></li>
+				</ul>
+				<a href="#" class="close">Cerrar</a>
+			</div>
+		</nav>
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<div class="logo"><img src="images/Logo.png" alt="Logo" width="150"></div>
+				<h2>Reporta, Conecta y Mejora tu Comunidad</h2>
+				<p>Haz tu voz visible. Reporta problemas urbanos con <strong>MiBarrioApp</strong></p>
+			</div>
+		</section>
+
+		<!-- Secciones adaptadas -->
+		<section id="wrapper">
+			<!-- One: Reportes -->
+			<section id="one" class="wrapper spotlight style1">
+				<div class="inner">
+					<a href="#" class="image"><img src="images/reportes.jpg" alt="Reportes" /></a>
+					<div class="content">
+						<h2 class="major">Reporta un problema</h2>
+						<p>Sube una imagen, indica la ubicación y selecciona el tipo de problema (basura, alumbrado,
+							calles). Tus reportes ayudan a mejorar tu comunidad.</p>
+						<a href="#" class="special">Publicar reporte</a>
+					</div>
+				</div>
+			</section>
+			<!-- Two: Noticias -->
+			<section id="two" class="wrapper alt spotlight style2">
+				<div class="inner">
+					<a href="#" class="image"><img src="images/noticias.jpg" alt="Noticias" /></a>
+					<div class="content">
+						<h2 class="major">Noticias del barrio</h2>
+						<p>Mantente informado sobre lo que ocurre en tu comunidad: eventos, comunicados y noticias
+							relevantes para todos los vecinos.</p>
+						<a href="#" class="special">Ver noticias</a>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="inner">
+				<h2 class="major">Contáctanos</h2>
+				<p>¿Tienes preguntas, sugerencias o necesitas ayuda? Escríbenos y con gusto te responderemos.</p>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Nombre</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Correo electrónico</label>
+							<input type="email" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Mensaje</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Enviar mensaje" /></li>
+					</ul>
+				</form>
+				<ul class="contact">
+					<li class="icon solid fa-envelope"><a href="#">contacto@mibarrioapp.com</a></li>
+					<li class="icon brands fa-facebook-f"><a href="#">facebook.com/mibarrioapp</a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; MiBarrioApp. Todos los derechos reservados.</li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
