@@ -1,8 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	MiBarrioApp - Aplicación Web para Reportar Problemas Comunitarios
-	Basado en Solid State by HTML5 UP
--->
 <html>
 
 <head>
@@ -10,9 +6,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+
 </head>
 <style>
 	/* Mostrar menú fijo en desktop y ocultar botón de menú */
@@ -64,34 +62,42 @@
 			<h1>
 				<a href="index.html">
 					MiBarrioApp
-					<img src="images/logo.png" alt="Logo de MiBarrioApp"
+					<img src="./images/Logo.png" alt="Logo de MiBarrioApp"
 						style="height: 40px; vertical-align: middle; margin-left: 8px;">
 				</a>
 			</h1>
-			<nav class="desktop-menu">
-				<a href="index.html">Inicio</a>
-				<a href="#">Reportar</a>
-				<a href="#">Mapa</a>
-				<a href="#">Registrarse</a>
-				<a href="#">Iniciar Sesión</a>
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="#">Reportar</a></li>
+						<li><a href="#">Mapa</a></li>
+						<li><a href="#">Registrarse</a></li>
+						<li><a href="#">Iniciar Sesión</a></li>
+					</ul>
+					<a href="#" class="close">Cerrar</a>
+				</div>
 			</nav>
-			<nav class="mobile-menu">
+
+			<nav>
 				<a href="#menu">Menu</a>
 			</nav>
-		</header>
 
+
+		</header>
 		<!-- Menu móvil -->
 		<nav id="menu">
 			<div class="inner">
 				<h2>Menu</h2>
 				<ul class="links">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="#">Reportar</a></li>
-					<li><a href="#">Mapa</a></li>
-					<li><a href="#">Historial</a></li>
-					<li><a href="#">Iniciar Sesión</a></li>
-				</ul>
-				<a href="#" class="close">Cerrar</a>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="#">Reportar</a></li>
+						<li><a href="#">Mapa</a></li>
+						<li><a href="#">Registrarse</a></li>
+						<li><a href="#">Iniciar Sesión</a></li>
+					</ul>
+				<a href="#" class="close">Close</a>
 			</div>
 		</nav>
 		<!-- Banner -->
@@ -174,6 +180,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
 
 </body>
 
