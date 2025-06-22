@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/style.css">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -53,6 +54,14 @@
 	}
 </style>
 </head>
+<button id="scrollTopBtn" title="Volver arriba">↑</button>
+<div id="welcomeOverlay">
+  <div class="welcome-box">
+    <h2>¡Bienvenido a MiBarrioApp!</h2>
+    <p>Gracias por ayudar a mejorar tu comunidad</p>
+    <div class="loader"></div>
+  </div>
+</div>
 
 <body class="is-preload">
 	<div id="page-wrapper">
@@ -73,7 +82,7 @@
 						<li><a href="index.html">Inicio</a></li>
 						<li><a href="#">Reportar</a></li>
 						<li><a href="#">Mapa</a></li>
-						<li><a href="#">Ingresar al Portal>
+						<li><a href="login.html">Ingresar al Portal</a></li>
 					</ul>
 					<a href="#" class="close">Cerrar</a>
 				</div>
@@ -83,18 +92,17 @@
 				<a href="#menu">Menu</a>
 			</nav>
 
-
 		</header>
 		<!-- Menu móvil -->
 		<nav id="menu">
 			<div class="inner">
 				<h2>Menu</h2>
 				<ul class="links">
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="#">Reportar</a></li>
-						<li><a href="#">Mapa</a></li>
-						<li><a href="#">Ingresar al Portal>
-					</ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="#">Reportar</a></li>
+					<li><a href="#">Mapa</a></li>
+					<li><a href="login.html">Ingresar al Portal>
+				</ul>
 				<a href="#" class="close">Close</a>
 			</div>
 		</nav>
@@ -140,7 +148,7 @@
 			<div class="inner">
 				<h2 class="major">Contáctanos</h2>
 				<p>¿Tienes preguntas, sugerencias o necesitas ayuda? Escríbenos y con gusto te responderemos.</p>
-				<form method="post" action="#">
+				<form id="contactForm" method="post" action="#">
 					<div class="fields">
 						<div class="field">
 							<label for="name">Nombre</label>
@@ -171,6 +179,8 @@
 
 	</div>
 
+	
+	<script src="assets/js/script.js"></script>
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
