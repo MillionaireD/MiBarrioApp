@@ -10,6 +10,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="estilos.css">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -97,7 +98,26 @@
 		<!-- Banner -->
 		<section id="banner">
 			<div class="inner">
-				<div class="logo"><img src="images/Logo.png" alt="Logo" width="150"></div>
+				<h2>Bienvenido a <strong>MiBarrioApp</strong></h2>
+				<div class="carrusel">
+  						<div class="carrusel-images" id="carrusel-images">
+    						<img src="images/Carru.jpg" alt="1">
+   			 				<img src="images/Carru1.jpg" alt="2">
+    						<img src="images/carru2.jpg" alt="3">
+    						<img src="images/carru3.jpg" alt="4">
+    						<img src="images/carru4.jpg" alt="5">
+    						<img src="images/carru5.jpg" alt="6">
+    						<img src="images/carru6.jpg" alt="7">
+    						<img src="images/carru7.jpg" alt="8">
+							
+  						</div>
+  						<div class="buttons">
+    						<button onclick="prevSlide()">&#10094;</button>
+    						<button onclick="nextSlide()">&#10095;</button>
+  						</div>
+				</div>
+
+  					<script src="carrusel.js"></script>
 				<h2>Reporta, Conecta y Mejora tu Comunidad</h2>
 				<p>Haz tu voz visible. Reporta problemas urbanos con <strong>MiBarrioApp</strong></p>
 			</div>
