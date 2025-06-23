@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -56,11 +56,11 @@
 </head>
 <button id="scrollTopBtn" title="Volver arriba">↑</button>
 <div id="welcomeOverlay">
-  <div class="welcome-box">
-    <h2>¡Bienvenido a MiBarrioApp!</h2>
-    <p>Gracias por ayudar a mejorar tu comunidad</p>
-    <div class="loader"></div>
-  </div>
+	<div class="welcome-box">
+		<h2>¡Bienvenido a MiBarrioApp!</h2>
+		<p>Gracias por ayudar a mejorar tu comunidad</p>
+		<div class="loader"></div>
+	</div>
 </div>
 
 <body class="is-preload">
@@ -115,12 +115,15 @@
 			</div>
 		</section>
 
+
+
+
 		<!-- Secciones adaptadas -->
 		<section id="wrapper">
 			<!-- One: Reportes -->
 			<section id="one" class="wrapper spotlight style1">
 				<div class="inner">
-					<a href="#" class="image"><img src="images/reportes.jpg" alt="Reportes" /></a>
+					<a href="#" class="image"><img src="images/03.svg" alt="Reportes" /></a>
 					<div class="content">
 						<h2 class="major">Reporta un problema</h2>
 						<p>Sube una imagen, indica la ubicación y selecciona el tipo de problema (basura, alumbrado,
@@ -132,7 +135,7 @@
 			<!-- Two: Noticias -->
 			<section id="two" class="wrapper alt spotlight style2">
 				<div class="inner">
-					<a href="#" class="image"><img src="images/noticias.jpg" alt="Noticias" /></a>
+					<a href="#" class="image"><img src="images/02.svg" alt="Noticias" /></a>
 					<div class="content">
 						<h2 class="major">Noticias del barrio</h2>
 						<p>Mantente informado sobre lo que ocurre en tu comunidad: eventos, comunicados y noticias
@@ -141,6 +144,24 @@
 					</div>
 				</div>
 			</section>
+		</section>
+
+			<!-- Carrusel de imágenes -->
+		<section id="carousel-section" class="wrapper style3">
+			<div class="inner">
+				<h2 class="major">Galería de la Comunidad</h2>
+				<div class="carousel-outer">
+					<button class="carousel-btn box prev" onclick="moveSlide(-1)">❮</button>
+					<div class="carousel-container">
+						<div class="carousel-track">
+							<div class="carousel-slide"><img src="images/barrio1.jpeg" alt="Imagen 1"></div>
+							<div class="carousel-slide"><img src="images/barrio2.jpg" alt="Imagen 2"></div>
+							<div class="carousel-slide"><img src="images/barrio3.jpg" alt="Imagen 3"></div>
+						</div>
+					</div>
+					<button class="carousel-btn box next" onclick="moveSlide(1)">❯</button>
+				</div>
+			</div>
 		</section>
 
 		<!-- Footer -->
@@ -179,9 +200,7 @@
 
 	</div>
 
-	
-	<script src="assets/js/script.js"></script>
-	<!-- Scripts -->
+	<script src="/assets/js/script.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>

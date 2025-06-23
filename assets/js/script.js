@@ -57,3 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  let currentIndex = 0;
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+
+  function moveSlide(direction) {
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  // Auto cambio opcional
+  setInterval(() => {
+    moveSlide(1);
+  }, 5000);
+
+

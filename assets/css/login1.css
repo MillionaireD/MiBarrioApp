@@ -14,6 +14,7 @@ body {
   justify-content: center;
   background: #244f64;
 }
+
 .wrapper {
   position: relative;
   max-width: 470px;
@@ -265,4 +266,51 @@ form
   width: 100%;
   height: 100%;
 }
+/* Header superior */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #1d3b4a;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(47, 48, 75, 0.1);
+}
 
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.header-right .header-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.header-right .header-link:hover {
+  color: #82c0d9;
+}
