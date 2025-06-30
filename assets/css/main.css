@@ -4156,4 +4156,29 @@ input, select, textarea {
 		}
 
 	}
+ /* ✅ Ajusta márgenes entre secciones para reducir espacio vertical */
+#wrapper > header.inner,
+#wrapper > .wrapper,
+#wrapper > .wrapper > .inner,
+section#footer .inner {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* ✅ Ajusta espacio extra de la imagen de portada */
+#wrapper header.inner img {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* ✅ Reduce espacio general entre formularios y acciones */
+.fields {
+    margin-bottom: 0.5rem;
+}
+
+.actions {
+    margin-top: 1rem !important;
+}
 
