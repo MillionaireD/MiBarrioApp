@@ -77,13 +77,24 @@
   <section id="footer">
     <div class="inner">
       <h2 class="major">Contáctanos</h2>
-      <form id="contactForm" method="post" action="#">
+      <form id="contactForm" method="POST" action="https://formspree.io/f/mnnqpwwr" enctype="multipart/form-data">
         <div class="fields">
-          <div class="field"><label for="name">Nombre</label><input type="text" id="name"/></div>
-          <div class="field"><label for="email">Correo electrónico</label><input type="email" id="email"/></div>
-          <div class="field"><label for="message">Mensaje</label><textarea id="message" rows="4"></textarea></div>
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
+          </div>
         </div>
-        <ul class="actions"><li><input type="submit" value="Enviar mensaje" /></li></ul>
+        <ul class="actions">
+          <li><input type="submit" value="Enviar mensaje"></li>
+        </ul>
       </form>
       <ul class="contact">
         <li class="icon solid fa-envelope"><a href="#">contacto@mibarrioapp.com</a></li>
@@ -103,5 +114,31 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Mensaje enviado con éxito. ¡Gracias por contactarnos!');
+        this.reset();
+      } else {
+        throw new Error('Error en el servidor');
+      }
+    })
+    .catch(error => {
+      alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.');
+      console.error(error);
+    });
+  });
+</script>
 </body>
 </html>

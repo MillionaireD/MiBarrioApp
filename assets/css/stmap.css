@@ -1,0 +1,48 @@
+#map {
+			border: 1px solid #ddd;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			margin-top: 10px;
+		}
+		#ubicacion-texto {
+			margin-top: 10px;
+		}
+		/* Notificación centrada */
+		.notification-center {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 20px 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+			z-index: 10000;
+			display: flex;
+			align-items: center;
+			max-width: 80%;
+			animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+		}
+
+		.notification-success {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		.notification-error {
+			background-color: #F44336;
+			color: white;
+		}
+
+		.notification-icon {
+			margin-right: 15px;
+			font-size: 1.5em;
+		}
+
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+
+		@keyframes fadeOut {
+			from { opacity: 1; }
+			to { opacity: 0; }
+		}

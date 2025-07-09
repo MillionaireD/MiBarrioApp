@@ -5,8 +5,10 @@
   <title>Reportar Problema - MiBarrioApp</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+   <link rel="stylesheet" href="assets/css/stmap.css" />
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -61,6 +63,14 @@
         <div class="inner">
           <h3 class="major">Formulario de reporte</h3>
 
+          <!-- Contenedor para mensajes emergentes -->
+          <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+
+          <!-- Formulario modificado para Formspree con tu ID único -->
+          <form action="https://formspree.io/f/mnnqpwwr" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="Nuevo Reporte - MiBarrioApp">
+            <input type="hidden" name="_language" value="es">
+
           <form method="post" action="#" enctype="multipart/form-data">
             <!-- ¿Deseas que el reporte sea anónimo? -->
             <div class="fields">
@@ -91,10 +101,12 @@
                 <label for="problema">Tipo de problema</label>
                 <select name="problema" id="problema">
                   <option value="">Selecciona un tipo</option>
-                  <option value="basura">Acumulación de basura</option>
-                  <option value="alumbrado">Alumbrado público dañado</option>
-                  <option value="calle">Huecos o baches en la vía</option>
-                  <option value="otro">Otro</option>
+                  <option value="Acumulación de basura">Acumulación de basura</option>
+                  <option value="Alumbrado público dañado">Alumbrado público dañado</option>
+                  <option value="Huecos o baches en la vía">Huecos o baches en la vía</option>
+                  <option value="Fuga de agua potable">Fuga de agua potable</option>
+                  <option value="Daños en áreas verdes">Daños en áreas verdes</option>
+                  <option value="otro">Otro tipo de problema</option> 
                 </select>
               </div>
             </div>
@@ -108,11 +120,14 @@
               </div>
             </div>
 
-            <!-- Subir imágenes -->
+            <!-- Ubicación del problema -->
             <div class="fields">
               <div class="field">
-                <label for="imagenes">Subir imágenes (puedes seleccionar varias)</label>
-                <input type="file" name="imagenes[]" id="imagenes" accept="image/*" multiple />
+                <label for="ubicacion-texto">Ubicación del problema</label>
+                <input type="text" id="ubicacion-texto" name="ubicacion-texto" placeholder="Haz clic en el mapa para seleccionar la ubicación" readonly>
+                <input type="hidden" name="ubicacion" id="ubicacion" value="">
+                <label style="margin-top: 15px; display: block;">Selecciona la ubicación en el mapa</label>
+                <div id="map" style="height: 400px; width: 100%;"></div>
               </div>
             </div>
 
@@ -145,6 +160,12 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/scmap.js"></script>
+
+  <!-- API de Google Maps -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4wlbQk7BUkhmU28uEK8xr9jdB4i5B_IM&libraries=geometry&callback=initMap">
+  </script>
 
   <!-- Lógica de formulario -->
   <script>
