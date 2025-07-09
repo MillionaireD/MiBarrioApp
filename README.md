@@ -17,7 +17,7 @@ MiBarrioApp es una aplicación web comunitaria que permite a los residentes de u
 
 ## 🛠️ Tecnologías utilizadas
 
-- HTML5, CSS3 y JavaScript (Vanilla)
+- HTML5, CSS3 y JavaScript (Vanilla), JQuery
 - Diseño responsivo (media queries)
 - Bootstrap (ligero para modales, si lo estás usando)
 - [Laragon](https://laragon.org/) o servidor local (opcional)
@@ -92,7 +92,7 @@ Editar
 
 ## 📚 Créditos
 
-- Desarrollado por: Miguel Lasprilla (@tu-usuario)
+- Desarrollado por: Miguel Lasprilla (@MillionaireD) y Eliecer Vargas (@)
 - Iconos y fuentes: FontAwesome, Google Fonts
 - Imágenes: [Fuente local o libres de derechos]
 
@@ -104,9 +104,9 @@ Este proyecto se encuentra bajo la Licencia MIT. Puedes usarlo, modificarlo y co
 
 ---
 
-## 🌐 Enlace en vivo (si aplica)
+## 🌐 Enlace en vivo 
 
-> [https://tusuario.github.io/MiBarrioApp](https://tusuario.github.io/MiBarrioApp)
+> https://millionaired.github.io/MiBarrioApp/
 
 ---
 
