@@ -2,177 +2,177 @@
 <html>
 
 <head>
-	<title>Reportar Problema - MiBarrioApp</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	
+  <title>Reportar Problema - MiBarrioApp</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
 </head>
 
 <body class="is-preload">
-	<div id="page-wrapper">
 
-		<!-- Header adaptado -->
-		<header id="header">
-			<h1>
-				<a href="index.html">
-					MiBarrioApp
-					<img src="images/Logo.png" alt="Logo"
-						style="height: 40px; vertical-align: middle; margin-left: 8px;">
-				</a>
-			</h1>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+  <button id="scrollTopBtn" title="Volver arriba">↑</button> 
 
-		<!-- Menu -->
-		<nav id="menu">
-			<div class="inner">
-				<h2>Menu</h2>
-				<ul class="links">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="generic.html">Reportar</a></li>
-					<li><a href="#">Mapa</a></li>
-					<li><a href="login.html">Ingresar al Portal</a></li>
-				</ul>
-				<a href="#" class="close">Cerrar</a>
-			</div>
-		</nav>
+  <div id="page-wrapper">
 
-		<!-- Formulario de reporte -->
-		<section id="wrapper">
-			<header>
-				<div class="inner">
-					<h2>Reporta un problema en tu comunidad</h2>
-					<p>Ayúdanos a mejorar tu barrio informando de manera clara cualquier inconveniente.</p>
-					<img src="images/poortada2.jpeg" alt="Imagen de comunidad"
-						style="margin-top: 20px; max-width: 100%; border-radius: 12px;">
-				</div>
-			</header>
+    <!-- Header adaptado -->
+    <header id="header">
+      <h1>
+        <a href="index.html">
+          MiBarrioApp
+          <img src="images/Logo.png" alt="Logo"
+            style="height: 40px; vertical-align: middle; margin-left: 8px;">
+        </a>
+      </h1>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
 
-			<div class="wrapper">
-				<div class="inner">
-					<h3 class="major">Formulario de reporte</h3>
+    <!-- Menú responsive completo -->
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="generic.html">Reportar</a></li>
+          <li><a href="noticias.html">Noticias del Barrio</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+        </ul>
+        <a href="#" class="close">Cerrar</a>
+      </div>
+    </nav>
 
-					<form method="post" action="#" enctype="multipart/form-data">
-    <!-- ¿Deseas que el reporte sea anónimo? -->
-    <div class="fields">
-        <div class="field">
-            <label for="anonimo">¿Deseas que tu reporte sea anónimo?</label>
-            <select name="anonimo" id="anonimo">
-                <option value="no">No</option>
-                <option value="si">Sí</option>
-            </select>
+    <!-- Formulario de reporte -->
+    <section id="wrapper">
+      <header>
+        <div class="inner">
+          <h2>Reporta un problema en tu comunidad</h2>
+          <p>Ayúdanos a mejorar tu barrio informando de manera clara cualquier inconveniente.</p>
+          <img src="images/test5.webp" alt="Imagen de comunidad"
+            style="margin-top: 20px; max-width: 100%; border-radius: 12px;">
         </div>
-    </div>
+      </header>
 
-    <!-- Datos personales -->
-    <div class="fields" id="datosUsuario">
-        <div class="field half">
-            <label for="name">Tu nombre</label>
-            <input type="text" name="name" id="name" />
+      <div class="wrapper">
+        <div class="inner">
+          <h3 class="major">Formulario de reporte</h3>
+
+          <form method="post" action="#" enctype="multipart/form-data">
+            <!-- ¿Deseas que el reporte sea anónimo? -->
+            <div class="fields">
+              <div class="field">
+                <label for="anonimo">¿Deseas que tu reporte sea anónimo?</label>
+                <select name="anonimo" id="anonimo">
+                  <option value="no">No</option>
+                  <option value="si">Sí</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Datos personales -->
+            <div class="fields" id="datosUsuario">
+              <div class="field half">
+                <label for="name">Tu nombre</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field half">
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email" />
+              </div>
+            </div>
+
+            <!-- Tipo de problema -->
+            <div class="fields">
+              <div class="field">
+                <label for="problema">Tipo de problema</label>
+                <select name="problema" id="problema">
+                  <option value="">Selecciona un tipo</option>
+                  <option value="basura">Acumulación de basura</option>
+                  <option value="alumbrado">Alumbrado público dañado</option>
+                  <option value="calle">Huecos o baches en la vía</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Descripción adicional -->
+            <div class="fields" id="detalleOtro" style="display: none;">
+              <div class="field">
+                <label for="descripcion">Describe el problema</label>
+                <textarea name="descripcion" id="descripcion" rows="4"
+                  placeholder="Describe el problema en detalle..."></textarea>
+              </div>
+            </div>
+
+            <!-- Subir imágenes -->
+            <div class="fields">
+              <div class="field">
+                <label for="imagenes">Subir imágenes (puedes seleccionar varias)</label>
+                <input type="file" name="imagenes[]" id="imagenes" accept="image/*" multiple />
+              </div>
+            </div>
+
+            <!-- Enviar -->
+            <ul class="actions">
+              <li><input type="submit" value="Enviar reporte" class="primary" /></li>
+            </ul>
+          </form>
+
         </div>
-        <div class="field half">
-            <label for="email">Correo electrónico</label>
-            <input type="email" name="email" id="email" />
-        </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- Tipo de problema -->
-    <div class="fields">
-        <div class="field">
-            <label for="problema">Tipo de problema</label>
-            <select name="problema" id="problema">
-                <option value="">Selecciona un tipo</option>
-                <option value="basura">Acumulación de basura</option>
-                <option value="alumbrado">Alumbrado público dañado</option>
-                <option value="calle">Huecos o baches en la vía</option>
-                <option value="otro">Otro</option>
-            </select>
-        </div>
-    </div>
+    <!-- Footer -->
+    <section id="footer">
+      <div class="inner">
+        <ul class="copyright">
+          <li>&copy; MiBarrioApp. Todos los derechos reservados.</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Descripción adicional -->
-    <div class="fields" id="detalleOtro" style="display: none;">
-        <div class="field">
-            <label for="descripcion">Describe el problema</label>
-            <textarea name="descripcion" id="descripcion" rows="4" placeholder="Describe el problema en detalle..."></textarea>
-        </div>
-    </div>
+  </div>
 
-    <!-- Subir imágenes -->
-    <div class="fields">
-        <div class="field">
-            <label for="imagenes">Subir imágenes (puedes seleccionar varias)</label>
-            <input type="file" name="imagenes[]" id="imagenes" accept="image/*" multiple />
-        </div>
-    </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
 
-    <!-- Enviar -->
-    <ul class="actions">
-        <li><input type="submit" value="Enviar reporte" class="primary" /></li>
-    </ul>
-</form>
-
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer -->
-		<section id="footer">
-			<div class="inner">
-				</ul>
-				<ul class="copyright">
-					<li>&copy; MiBarrioApp. Todos los derechos reservados.</li>
-				</ul>
-			</div>
-		</section>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<!-- Lógica de formulario -->
-	<script>
-    // Mostrar/ocultar campos según opciones
+  <!-- Lógica de formulario -->
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const anonimoSelect = document.getElementById('anonimo');
-        const datosUsuario = document.getElementById('datosUsuario');
-        const problemaSelect = document.getElementById('problema');
-        const detalleOtro = document.getElementById('detalleOtro');
+      const anonimoSelect = document.getElementById('anonimo');
+      const datosUsuario = document.getElementById('datosUsuario');
+      const problemaSelect = document.getElementById('problema');
+      const detalleOtro = document.getElementById('detalleOtro');
 
-        // Mostrar u ocultar datos personales según anonimato
-        anonimoSelect.addEventListener('change', function () {
-            if (this.value === 'si') {
-                datosUsuario.style.display = 'none';
-                datosUsuario.querySelectorAll('input').forEach(input => input.value = '');
-            } else {
-                datosUsuario.style.display = 'flex';
-            }
-        });
+      anonimoSelect.addEventListener('change', function () {
+        if (this.value === 'si') {
+          datosUsuario.style.display = 'none';
+          datosUsuario.querySelectorAll('input').forEach(input => input.value = '');
+        } else {
+          datosUsuario.style.display = 'flex';
+        }
+      });
 
-        // Mostrar área de texto si elige "otro"
-        problemaSelect.addEventListener('change', function () {
-            if (this.value === 'otro') {
-                detalleOtro.style.display = 'flex';
-            } else {
-                detalleOtro.style.display = 'none';
-                document.getElementById('descripcion').value = '';
-            }
-        });
+      problemaSelect.addEventListener('change', function () {
+        if (this.value === 'otro') {
+          detalleOtro.style.display = 'flex';
+        } else {
+          detalleOtro.style.display = 'none';
+          document.getElementById('descripcion').value = '';
+        }
+      });
     });
-</script>
-
+  </script>
 
 </body>
 
