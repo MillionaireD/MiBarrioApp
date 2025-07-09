@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Sobre Nosotros - MiBarrioApp</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<button id="scrollTopBtn" title="Volver arriba">↑</button>
+
+<div id="page-wrapper">
+  <!-- Header -->
+  <header id="header">
+    <h1>
+      <a href="index.html">MiBarrioApp
+        <img src="images/Logo.png" alt="Logo" style="height:40px;vertical-align:middle;margin-left:8px;">
+      </a>
+    </h1>
+    <nav><a href="#menu">Menu</a></nav>
+  </header>
+
+  <!-- Menú responsive -->
+  <nav id="menu">
+    <div class="inner">
+      <h2>Menu</h2>
+      <ul class="links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="generic.html">Reportar</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+      </ul>
+      <a href="#" class="close">Cerrar</a>
+    </div>
+  </nav>
+
+  <!-- Sección Sobre Nosotros -->
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <h2 class="major">¿Quiénes somos?</h2>
+      <p><strong>MiBarrioApp</strong> nace como una iniciativa ciudadana para facilitar la comunicación entre los vecinos y mejorar la calidad de vida en nuestras comunidades. Nuestro objetivo es conectar a las personas con su entorno, permitiendo reportar problemas urbanos de forma sencilla y rápida.</p>
+
+      <h3>¿Qué hacemos?</h3>
+      <p>Proveemos una plataforma accesible que permite a los ciudadanos reportar problemas en sus barrios con fotos, ubicación y descripciones detalladas. También ofrecemos un espacio para noticias y un mapa interactivo que mantiene a la comunidad informada.</p>
+
+      <h3>Visión</h3>
+      <p>Ser la herramienta digital más confiable y accesible para promover el civismo y la acción comunitaria en Panamá y más allá.</p>
+
+      <h3>Misión</h3>
+      <p>Empoderar a los ciudadanos para que sean protagonistas en la solución de problemas barriales, fomentando un sentido de pertenencia y colaboración.</p>
+
+      <h3>Valores</h3>
+      <ul>
+        <li><strong>Transparencia:</strong> Facilitar la comunicación clara y abierta entre vecinos y autoridades.</li>
+        <li><strong>Participación:</strong> Incentivar la colaboración activa de la comunidad.</li>
+        <li><strong>Innovación:</strong> Usar tecnología para mejorar la vida en el barrio.</li>
+        <li><strong>Compromiso:</strong> Trabajar juntos por un entorno más seguro y limpio.</li>
+      </ul>
+
+      <h3>Impacto Comunitario</h3>
+      <p>Desde nuestro lanzamiento, miles de reportes han sido enviados y atendidos, logrando mejoras visibles en alumbrado público, limpieza y reparación de calles, fortaleciendo así el tejido social local.</p>
+
+      <!-- Video embebido -->
+      <div class="video-container" style="position:relative; padding-bottom:56.25%; height:0; margin:2rem 0;">
+        <iframe src="https://www.youtube.com/embed/XnlWqTB0QDM" 
+           style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+           frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="inner">
+      <h2 class="major">Contáctanos</h2>
+      <form id="contactForm" method="POST" action="https://formspree.io/f/mnnqpwwr" enctype="multipart/form-data">
+        <div class="fields">
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Enviar mensaje"></li>
+        </ul>
+      </form>
+      <ul class="contact">
+        <li class="icon solid fa-envelope"><a href="#">contacto@mibarrioapp.com</a></li>
+        <li class="icon brands fa-facebook-f"><a href="#">facebook.com/mibarrioapp</a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; MiBarrioApp. Todos los derechos reservados.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/script.js"></script>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Mensaje enviado con éxito. ¡Gracias por contactarnos!');
+        this.reset();
+      } else {
+        throw new Error('Error en el servidor');
+      }
+    })
+    .catch(error => {
+      alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.');
+      console.error(error);
+    });
+  });
+</script>
+</body>
+</html>

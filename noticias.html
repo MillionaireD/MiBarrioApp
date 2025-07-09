@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Noticias del Barrio - MiBarrioApp</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+
+<body class="is-preload">
+
+  <button id="scrollTopBtn" title="Volver arriba">↑</button>
+
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1>
+        <a href="index.html">
+          MiBarrioApp
+          <img src="images/Logo.png" alt="Logo de MiBarrioApp"
+            style="height: 40px; vertical-align: middle; margin-left: 8px;">
+        </a>
+      </h1>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <!-- Menú móvil -->
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="generic.html">Reportar</a></li>
+          <li><a href="noticias.html">Noticias del Barrio</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+        </ul>
+        <a href="#" class="close">Cerrar</a>
+      </div>
+    </nav>
+
+    <!-- Noticias -->
+    <section class="wrapper style2">
+      <div class="inner">
+        <h2 class="major">Noticias del Barrio</h2>
+        <p style="margin-bottom: 2rem;">Mantente informado sobre las actividades, eventos y mejoras que ocurren en nuestra comunidad.</p>
+        <div class="row">
+          <!-- Noticia 1 -->
+          <div class="col-6 col-12-medium">
+            <article class="box">
+              <img src="images/parque.webp" alt="Parque comunitario" class="image fit" />
+              <h3 class="open-modal" data-id="1" style="cursor:pointer;">Inauguración del nuevo parque comunitario</h3>
+              <p>El sábado 12 de agosto se inauguró el nuevo parque vecinal...</p>
+              <a href="#" class="button small open-modal" data-id="1">Leer más</a>
+            </article>
+          </div>
+
+          <!-- Noticia 2 -->
+          <div class="col-6 col-12-medium">
+            <article class="box">
+              <img src="images/reciclaje.webp" alt="Reciclaje comunitario" class="image fit" />
+              <h3 class="open-modal" data-id="2" style="cursor:pointer;">Campaña de reciclaje en la comunidad</h3>
+              <p>Vecinos organizan jornadas de reciclaje para reducir desechos...</p>
+              <a href="#" class="button small open-modal" data-id="2">Leer más</a>
+            </article>
+          </div>
+
+          <!-- Noticia 3 -->
+          <div class="col-6 col-12-medium">
+            <article class="box">
+              <img src="images/luz.webp" alt="Alumbrado público" class="image fit" />
+              <h3 class="open-modal" data-id="3" style="cursor:pointer;">Mantenimiento del alumbrado público</h3>
+              <p>Personal municipal inició la reparación de luminarias dañadas...</p>
+              <a href="#" class="button small open-modal" data-id="3">Leer más</a>
+            </article>
+          </div>
+
+          <!-- Noticia 4 -->
+          <div class="col-6 col-12-medium">
+            <article class="box">
+              <img src="images/fiesta.webp" alt="Fiesta comunitaria" class="image fit" />
+              <h3 class="open-modal" data-id="4" style="cursor:pointer;">Fiesta comunitaria de fin de año</h3>
+              <p>La comunidad celebró con música, comida y actividades para toda la familia...</p>
+              <a href="#" class="button small open-modal" data-id="4">Leer más</a>
+            </article>
+          </div>
+
+          <!-- Noticia 5 -->
+          <div class="col-6 col-12-medium">
+            <article class="box">
+              <img src="images/reparacion.webp" alt="Reparación de calles" class="image fit" />
+              <h3 class="open-modal" data-id="5" style="cursor:pointer;">Reparación de calles tras las lluvias</h3>
+              <p>El equipo de mantenimiento vial comenzó los trabajos de reparación...</p>
+              <a href="#" class="button small open-modal" data-id="5">Leer más</a>
+            </article>
+          </div>
+
+          <!-- Noticia 6 -->
+          <div class="col-6 col-12-medium">
+            <article class="box">
+              <img src="images/computo.webp" alt="Curso de computación" class="image fit" />
+              <h3 class="open-modal" data-id="6" style="cursor:pointer;">Curso gratuito de computación</h3>
+              <p>Se abrió la inscripción al nuevo curso para adultos mayores...</p>
+              <a href="#" class="button small open-modal" data-id="6">Leer más</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal personalizado -->
+    <div id="newsModal" class="modal-custom">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h3 id="modalTitle" class="modal-title"></h3>
+        <img id="modalImage" src="" alt="Imagen de noticia" class="modal-img">
+        <p id="modalText" class="modal-text"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="inner">
+        <h2 class="major">Contáctanos</h2>
+        <p>¿Tienes preguntas, sugerencias o necesitas ayuda? Escríbenos y con gusto te responderemos.</p>
+        <form id="contactForm" method="POST" action="https://formspree.io/f/mnnqpwwr">
+          <div class="fields">
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="field">
+              <label for="message">Mensaje</label>
+              <textarea name="message" id="message" rows="4"></textarea>
+            </div>
+          </div>
+          <ul class="actions">
+            <li><input type="submit" value="Enviar mensaje" /></li>
+          </ul>
+        </form>
+        <ul class="contact">
+          <li class="icon solid fa-envelope"><a href="#">contacto@mibarrioapp.com</a></li>
+          <li class="icon brands fa-facebook-f"><a href="#">facebook.com/mibarrioapp</a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; MiBarrioApp. Todos los derechos reservados.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+  <!-- Modal Noticias Script -->
+  <script>
+    const noticias = {
+      1: {
+        title: "Inauguración del nuevo parque comunitario",
+        text: "El sábado 12 de agosto se inauguró el nuevo parque vecinal, con áreas verdes, juegos infantiles, zona de ejercicios y espacios para eventos comunitarios. Fue financiado por la Alcaldía con participación activa de los vecinos.",
+        image: "images/parque.webp"
+      },
+      2: {
+        title: "Campaña de reciclaje en la comunidad",
+        text: "Durante el mes de agosto, los vecinos organizaron jornadas de reciclaje en la plaza principal. Se recolectaron más de 200 kg de materiales reutilizables. La iniciativa busca crear conciencia ambiental desde casa.",
+        image: "images/reciclaje.webp"
+      },
+      3: {
+        title: "Mantenimiento del alumbrado público",
+        text: "El personal municipal inició la reparación y cambio de luminarias en sectores con reportes previos. Se espera que la iluminación mejore la seguridad en calles y parques durante las noches.",
+        image: "images/luz.webp"
+      },
+      4: {
+        title: "Fiesta comunitaria de fin de año",
+        text: "La comunidad celebró con música en vivo, comidas tradicionales, actividades para niños y fuegos artificiales. La fiesta tuvo lugar en el parque central y reunió a más de 300 familias del barrio.",
+        image: "images/fiesta.webp"
+      },
+      5: {
+        title: "Reparación de calles tras las lluvias",
+        text: "Tras las intensas lluvias de julio, el equipo de mantenimiento vial comenzó trabajos de reparación de baches, cunetas y drenajes para evitar inundaciones en puntos críticos del barrio.",
+        image: "images/reparacion.webp"
+      },
+      6: {
+        title: "Curso gratuito de computación",
+        text: "El centro comunal abrió inscripciones para un curso básico de computación orientado a adultos mayores. Incluye clases de internet, correo electrónico y herramientas de oficina. Inicio: 15 de agosto.",
+        image: "images/computo.webp"
+      }
+    };
+
+    function openModal(id) {
+      const noticia = noticias[id];
+      if (noticia) {
+        document.getElementById('modalTitle').textContent = noticia.title;
+        document.getElementById('modalText').textContent = noticia.text;
+        document.getElementById('modalImage').src = noticia.image;
+        document.getElementById('newsModal').style.display = 'flex';
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('newsModal').style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById('newsModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    document.querySelectorAll('.open-modal').forEach(el => {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = this.getAttribute('data-id');
+        openModal(id);
+      });
+    });
+  </script>
+</body>
+
+</html>
